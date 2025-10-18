@@ -16,16 +16,16 @@ import { WishListComponent } from './layout/pages/wish-list/wish-list.component'
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: HomeComponent, canActivate:[authGuard], title: "Home"},
+    {path: 'home', component: HomeComponent, title: "Home"},
     {path: 'login', component: LoginComponent,title: "Login"},
     {path: 'register', component: RegisterComponent,title: "Register"},
-    {path: 'product', component: ProductsComponent,canActivate:[authGuard],title: "Products"},
-    {path: 'brands', component: BrandsComponent,canActivate:[authGuard],title: "Brands"},
-    {path: 'categories', component: CategoriesComponent,canActivate:[authGuard],title: "Categories"},
-    {path: 'cart', component: CartComponent,canActivate:[authGuard],title: "Cart"},
+    {path: 'product', component: ProductsComponent,title: "Products"},
+    {path: 'brands', component: BrandsComponent,title: "Brands"},
+    {path: 'categories', component: CategoriesComponent,title: "Categories"},
+    {path: 'cart', component: CartComponent,title: "Cart"},
     {path: 'forget-password', component: ForgetPasswordComponent, title: "Forget Password"},
     {path: 'wishList', component: WishListComponent, title: "Wish List"},
-    {path: 'product-details/:pid', component:ProductDetailsComponent,canActivate:[authGuard] , title: "Product Details"},
-    {path: 'checkout/:id', component:CheckoutComponent,canActivate:[authGuard] , title: "Checkout"},
+    {path: 'product-details/:pid', component:ProductDetailsComponent, title: "Product Details"},
+    {path: 'checkout/:id', component:CheckoutComponent, title: "Checkout"},
     {path: '**', component: NotFoundComponent, title: "Not Found"} 
 ];
